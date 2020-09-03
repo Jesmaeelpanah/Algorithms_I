@@ -2,6 +2,14 @@
  *  Quick-Find Algorithm with the complexity of 1 for Connect and N for Union 
  *  Worst-case time: M * N (M union-find operations on a set of N objects)
  */
+public class QuickFind {
+	
+	public static void main (String[] args) {
+		
+	}
+	
+}
+
 class QuickFindUF {
 	private int[] id;
 	

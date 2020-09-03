@@ -1,13 +1,13 @@
 import java.util.Arrays;
 import java.util.Random;
-
+/*
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
-
+*/
 public class Percolation {
-	private int[][] grid;
-	private int dimension;
+	private static int[][] grid;
+	private static int dimension;
     /**
      * 
      * creates n-by-n grid, with all sites initially blocked
@@ -28,7 +28,7 @@ public class Percolation {
      * @param col
      * @throws Exception 
      */
-    public void open(int row, int col) throws Exception {
+    public static void open(int row, int col) throws Exception {
     	isValid(row, col);
     	grid[row][col] = 1;
     }
@@ -78,12 +78,12 @@ public class Percolation {
      * 
      * @return
      */
-    public boolean percolates() {
+    public static boolean percolates() {
     	return false;
 
     }
     
-    public void isValid(int i, int j) throws Exception {
+    public static void isValid(int i, int j) throws Exception {
     	if (i < 0 || i >= dimension || j < 0 || j >= dimension)
     		throw new IllegalArgumentException("index out of ragne!");
     }
@@ -94,7 +94,7 @@ public class Percolation {
 	 * 
 	 * @param args
 	 */
-    public void main(String[] args) {
+    public static void main(String[] args) {
     	Random rand = new Random();
     	int Upperbound = dimension;
     	do {
@@ -103,7 +103,6 @@ public class Percolation {
     		try {
 				open(row, col);
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}  		
     	} while(!percolates());
