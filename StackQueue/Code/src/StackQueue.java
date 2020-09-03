@@ -1,5 +1,3 @@
-package stackQueue;
-
 import java.util.Iterator;
 
 public class StackQueue {
